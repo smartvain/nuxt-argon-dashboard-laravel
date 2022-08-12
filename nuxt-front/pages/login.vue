@@ -149,7 +149,7 @@ export default {
         this.$axios.defaults.headers.common.Authorization = `${this.$auth.getToken(
           "local"
         )}`;
-        this.$router.push("/dashboard");
+        // this.$router.push("/dashboard");
       } catch (error) {
         await this.$notify({
           type: "danger",
