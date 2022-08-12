@@ -1,5 +1,5 @@
 <template>
-  <no-ssr>
+  <client-only>
     <bread-crumb list-classes="breadcrumb-links breadcrumb-dark">
       <BreadCrumbItem>
         <nuxt-link to="/" aria-label="Home">
@@ -21,7 +21,7 @@
         <span v-else>{{ route.name }}</span>
       </BreadCrumbItem>
     </bread-crumb>
-  </no-ssr>
+  </client-only>
 </template>
 
 <script>

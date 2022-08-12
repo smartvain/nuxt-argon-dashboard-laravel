@@ -13,12 +13,12 @@
         </div>
 
       <div class="card-body">
-        <no-ssr>
+        <client-only>
           <world-map class="vector-map vector-map-sm"
                      :map-data="mapData"
                      :points="points">
           </world-map>
-        </no-ssr>
+        </client-only>
         <ul class="list-group list-group-flush list my--3">
           <li class="list-group-item px-0">
             <div class="row align-items-center">
