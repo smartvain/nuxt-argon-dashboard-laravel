@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use CloudCreativity\LaravelJsonApi\LaravelJsonApi;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,5 +27,6 @@ class AppServiceProvider extends ServiceProvider
     {
         LaravelJsonApi::defaultApi('v1');
         LaravelJsonApi::$validationFailures = true;
+        URL::forceRootUrl(config('app.url'));
     }
 }
