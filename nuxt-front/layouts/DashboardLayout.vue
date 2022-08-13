@@ -48,6 +48,7 @@
         </sidebar-item>
 
         <sidebar-item
+          v-if="false"
           :link="{
             name: 'Google',
             icon: 'ni ni-pin-3',
