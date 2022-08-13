@@ -68,43 +68,45 @@
           "
         />
 
-        <a
-          href="https://www.creative-tim.com/product/nuxt-argon-dashboard-pro-laravel"
-          target="_blank"
-          class="btn btn-danger btn-icon ml-sm-3 d-md-block mb-2 mt-1 mr-3"
-          ><span class="btn-inner--icon"
-            ><i class="fas fa-download mr-2"></i
-          ></span>
-          <span class="nav-link-inner--text">Upgrade to PRO</span></a
-        >
+        <div v-show="isOpen.officialButtons">
+          <a
+            href="https://www.creative-tim.com/product/nuxt-argon-dashboard-pro-laravel"
+            target="_blank"
+            class="btn btn-danger btn-icon ml-sm-3 d-md-block mb-2 mt-1 mr-3"
+            ><span class="btn-inner--icon"
+              ><i class="fas fa-download mr-2"></i
+            ></span>
+            <span class="nav-link-inner--text">Upgrade to PRO</span></a
+          >
 
-        <a
-          href="https://nuxt-argon-dashboard-laravel.creative-tim.com/documentation/"
-          target="_blank"
-          class="btn btn-neutral btn-icon ml-sm-3 d-md-block mb-2 mr-3"
-          ><span class="btn-inner--icon"
-            ><i class="fas fa-file-alt mr-2"></i
-          ></span>
-          <span class="nav-link-inner--text">Documentation</span></a
-        >
+          <a
+            href="https://nuxt-argon-dashboard-laravel.creative-tim.com/documentation/"
+            target="_blank"
+            class="btn btn-neutral btn-icon ml-sm-3 d-md-block mb-2 mr-3"
+            ><span class="btn-inner--icon"
+              ><i class="fas fa-file-alt mr-2"></i
+            ></span>
+            <span class="nav-link-inner--text">Documentation</span></a
+          >
 
-        <a
-          href="https://www.creative-tim.com/product/nuxt-argon-dashboard-laravel"
-          target="_blank"
-          class="btn btn-info btn-icon ml-sm-3 d-md-block mb-2 mr-3"
-          ><span class="btn-inner--icon"><i class="fas fa-gift mr-2"></i></span>
-          <span class="nav-link-inner--text">Download now</span></a
-        >
+          <a
+            href="https://www.creative-tim.com/product/nuxt-argon-dashboard-laravel"
+            target="_blank"
+            class="btn btn-info btn-icon ml-sm-3 d-md-block mb-2 mr-3"
+            ><span class="btn-inner--icon"><i class="fas fa-gift mr-2"></i></span>
+            <span class="nav-link-inner--text">Download now</span></a
+          >
 
-        <a
-          href="https://github.com/creativetimofficial/nuxt-argon-dashboard-laravel"
-          target="_blank"
-          class="btn btn-dark btn-icon ml-sm-3 d-md-block mr-3"
-          ><span class="btn-inner--icon"
-            ><i class="fab fa-github mr-2"></i
-          ></span>
-          <span class="nav-link-inner--text">Star us on Github</span></a
-        >
+          <a
+            href="https://github.com/creativetimofficial/nuxt-argon-dashboard-laravel"
+            target="_blank"
+            class="btn btn-dark btn-icon ml-sm-3 d-md-block mr-3"
+            ><span class="btn-inner--icon"
+              ><i class="fab fa-github mr-2"></i
+            ></span>
+            <span class="nav-link-inner--text">Star us on Github</span></a
+          >
+        </div>
       </template>
     </side-bar>
     <div class="main-content">
@@ -149,6 +151,13 @@ export default {
     DashboardNavbar,
     ContentFooter,
     DashboardContent,
+  },
+  data() {
+    return {
+      isOpen: {
+        officialButtons: false,
+      }
+    }
   },
   methods: {
     initScrollbar() {
