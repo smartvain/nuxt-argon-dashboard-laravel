@@ -118,7 +118,7 @@
       <div @click="$sidebar.displaySidebar(false)">
         <nuxt></nuxt>
       </div>
-      <content-footer v-if="!$route.meta.hideFooter"></content-footer>
+      <content-footer v-if="$route.meta.hideFooter"></content-footer>
     </div>
   </div>
 </template>
