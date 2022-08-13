@@ -22,7 +22,7 @@
       <template v-else>
         <i :class="link.icon"></i>
         <div v-if="link.name == 'Examples (API)'">
-          <span class="nav-link-text" style="color: #3cab79"
+          <span class="nav-link-text" style="color: #1363DF"
             >{{ link.name }} <b class="caret"></b
           ></span>
         </div>
